@@ -1,0 +1,23 @@
+//colors
+$colors:(
+  bg-color:rgba(22, 20, 20, 0.795),
+  accent-color:#C68952,
+  primary-color:#66471A,
+  font-color:#979494,
+);
+$font-sizes:(
+  font-size-xs:17px,
+  font-size-sm:20px,
+  font-size-md:24px,
+  font-size-lg:28px,
+  font-size-xl:30px
+);
+//break points
+
+$break-points:(
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+)

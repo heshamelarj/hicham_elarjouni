@@ -1,0 +1,33 @@
+*,
+*::after,
+*::before{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  height: 100%;
+  width:100%;
+  font-family:'Verdana';
+  background-color: map-get($colors,bg-color);
+  color:map-get($colors,font-color);
+  padding: .5em;
+}
+.full-container{
+  padding: .5em;
+  border: .6em darken(map-get($colors,font-color),20%) solid;
+}
+  .header__nav{
+    li{
+      list-style: none;
+    }
+  }
+  .overlay{
+   background-color: rgba(39, 39, 39, 0.129);
+   position: relative;
+   top:0;
+   left:0;
+   right: 0;
+   bottom: 0;
+  }
+    

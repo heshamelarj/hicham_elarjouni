@@ -1,0 +1,32 @@
+@import './_variables';
+@import './_mixins';
+@import './_normalize';
+
+
+@import './_keyframes';
+
+@import './_animations';
+   
+  //include font mixin
+  @include font('Lato','../fonts/Lato-Regular');
+  @include font('Josifin Lab','../fonts/JosefinSlab-Regular');
+  @include font('Arvo','../fonts/Arvo-Regular');
+  @include font('Verdana','../fonts/Verdana');
+
+
+
+
+
+/*MEDIA QUERIES*/
+
+@include break(xs){
+  @import './_xs_screens';
+}
+@include break(sm){
+  body{
+    background-color: aqua;
+  }
+}
+
+ 
+  

@@ -1,0 +1,188 @@
+/* LOGO ANIMATIONS*/
+/* animating the logo  */ 
+// ANIMATING ...
+  .logo
+  {
+
+    perspective: 1000px;
+     // RECT ANIMATION 
+     rect
+     {
+        animation : moveRectBAck 2s ease-in forwards;
+      }
+    //initila styling for the animation of teh svg
+        .l-name:not(:first-child)
+        { 
+           @for $i from 2 through 11
+           {
+              path,
+              polyline,
+              line,
+              polygon
+              {
+                &:nth-child(#{$i})
+                  {
+                    transform: translateY(-9em);
+                    opacity:0;
+                  }
+   
+  
+              }
+            }
+  
+            path
+            {
+              &:nth-of-type(1)
+              {
+                transform: translateX(0em);
+              }
+            }
+        } 
+
+        .f-name
+        { 
+          @for $i from 1 through 6
+          {
+            path,
+            polyline,
+            line
+            {
+              &:nth-child(#{$i})
+              {
+                transform: translateX(0em);
+                opacity:0;
+              }
+            }
+          }
+        }
+
+    //CAME BACK ANIMATION
+        .f-name
+        {
+          animation: move__f_name_back-out .3s ease forwards;
+          polyline:nth-child(1)
+          {
+            animation: last__name__letters-animate-out .1s ease backwards ;
+          }
+          @for $i from 2 through 6
+          {
+            path,
+            polyline 
+            {
+              &:nth-child(#{$i})
+              {
+                animation: last__name__letters-animate-out .8s ease backwards  ; 
+                animation-delay: ( 150ms * $i ) - 300;
+              }
+            }
+          }
+         
+        }
+
+
+        polygon:first-of-type
+        {
+          animation:  shrink__first__letter-out .3s ease-in-out forwards;
+        }
+        .l-name
+        {
+          //ANIMATION OUT LOOP HERE FOR L-NAME
+          @for $i from 2 through 11
+          {
+            path:not(:first-child),
+            polyline,
+            line,
+            polygon
+            {
+              &:nth-child(#{$i})
+              {
+                animation: last__name__letters-animate-out .8s ease backwards  ; 
+                animation-delay: ( 150ms * $i ) - 300;
+              }
+            }
+          }
+
+         
+        } 
+    &:hover,
+    &:focus,
+    &:active
+    {   
+      
+      // RECT ANIMATION 
+      rect
+      {
+        transform-origin:center center;
+        animation : removeRect .5s ease-in forwards ;
+      }
+        // FIRST NAME ANIMATION  
+      polygon:first-of-type
+      {
+        animation:  shrink__first__letter .3s ease-in-out forwards;
+      }
+      .f-name
+      {  
+        animation: move__f_name_back .3s ease forwards;  
+      }
+      .f-name polyline:nth-child(1)
+      {
+        animation: last__name__letters-animate .7s ease forwards alternate ;
+      } 
+      //  NAME ANIMATION
+      @for $i from 2 through 11
+      {
+        path:not(:first-child),
+        polyline,
+        line,
+        polygon
+        {
+          &:nth-child(#{$i})
+          {
+            animation: last__name__letters-animate 300ms ease forwards alternate ; 
+            animation-delay: ( 150ms * $i ) - 300;
+          }
+        }
+      }
+    }
+  }
+
+  /*--- MENU BUTTON ANIMATION ----*/
+  // MENU BUTTON ANIMATIONS
+.menu
+{
+  
+  width:5%;
+  perspective:1000px;
+
+    &:hover,
+    &:focus,
+    &:active
+    {
+      .menu-bars
+      {
+         perspective:1000px;
+        line
+        {
+           &:nth-of-type(1)
+          {
+            transform-origin:center bottom  ;
+            animation: menu-first-bar-animate .1s ease forwards ; 
+            animation-delay:100ms;
+          }
+          &:nth-of-type(2)
+          {
+            // transform-origin:center bottom  ;
+            // animation: menu-first-bar-animate .8s ease forwards ; 
+            // animation-delay:300ms;
+            display:none;
+          }
+          &:nth-of-type(3)
+          {
+            transform-origin:center bottom  ;
+            animation: menu-second-bar-animate .1s ease  forwards; 
+            animation-delay:100ms;
+          }
+        }   
+      }
+    }
+}
