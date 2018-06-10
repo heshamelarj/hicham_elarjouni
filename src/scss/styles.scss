@@ -22,11 +22,7 @@
 @include break(xs){
   @import './_xs_screens';
 }
-@include break(sm){
-  body{
-    background-color: aqua;
-  }
-}
+
 
  
   
