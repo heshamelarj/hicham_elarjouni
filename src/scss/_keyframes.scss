@@ -96,3 +96,48 @@
       transform: rotate(30deg) translateY(-.4em) translateX(-.7em);
       }
 }
+//reponsive menu aniamtion 
+@keyframes hide-menu{
+  0%{
+    opacity:1;
+    transform:translateY(0vh)
+  }
+  90%{
+    opacity: .1;
+  }
+  91%{
+    opacity: .1;
+  }
+
+  100%{
+    height: 0;
+    opacity: 0;
+    transform:translateY(-30vh)
+  }
+}
+@keyframes show-menu{
+  0%{
+    opacity: 0;
+    transform:rotateX(300deg) translateY(-30vh)
+  }
+ 
+  50%{
+    opacity: .8;
+    transform: translateY(10vh);
+
+  }
+80%{
+   
+    transform:rotateX(60deg) translateY(-9vh);
+
+  }
+  90%{
+   
+    transform:rotateX(-60deg) translateY(9vh);
+
+  }
+  100%{
+    opacity: 1;
+    transform:rotateX(0deg) translateY(0vh);
+  }
+}

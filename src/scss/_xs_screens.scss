@@ -1,20 +1,17 @@
 
 /*RESPONSIVE MENU XS*/
-.hidden-responsive-menu{
-  transform-origin: top center;
-  height: 0;
-  width:0;
-  transform: translateX(-30em);
-  transition:  transform 300ms ease-in-out;
-}
+
 .shown-responsive-menu{
+  transform-origin: center center ;
+  
+  //syling the menu 
   height: 60%;
   width: 100%;
-  transform:  translateX(0em);
   height: 100vh;
   
   
   background-color: darken(map-get($colors,font-color),40%);
+  //stying the close button
   .menu__fullscreen--close{
     align-self: flex-start;
     position: absolute;
@@ -39,10 +36,11 @@
     
     
   }
-
+  //styling nav
   .menu__fullscreen__nav{
     padding-top: 3em;
     width: 100%;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -55,6 +53,7 @@
   li{
     text-align: center;
     width: 80vw;
+    height: 10vh;
     flex:0 0 90%;
     list-style: none;
     background-color: darken(map-get($colors,accent-color),2%);
@@ -74,16 +73,86 @@
     }
   }
   }
-  transition:  transform 300ms ease-in-out;
+  animation: show-menu 300ms cubic-bezier(0.24, 0.33, 0, 0.63) forwards;
   
+}
+.hidden-responsive-menu{
+  transform-origin: top center;
+  height: 60%;
+  width: 100%;
+  height: 100vh;
+  
+  
+  background-color: darken(map-get($colors,font-color),40%);
+  //stying the close button
+  .menu__fullscreen--close{
+    align-self: flex-start;
+    position: absolute;
+    right: 0em;
+    top:-.3em;
+    a{
+      color:darken(map-get($colors,accent-color),2%);      
+      text-decoration: none;
+      transition: all 300ms ease-in-out;      
+      font-family: 'Josifin Lab';
+      &:hover{
+          color: darken(map-get($colors,primary-color),20%);
+          
+          transition: all 300ms ease-in-out;      
+      }
+    }
+ 
+  }
+  a{
+    text-decoration: none;
+    color: darken(map-get($colors,font-color),40%);
+    
+    
+  }
+  //styling nav
+  .menu__fullscreen__nav{
+    padding-top: 3em;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  ul{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+  li{
+    text-align: center;
+    width: 80vw;
+    height: 10vh;
+    flex:0 0 90%;
+    list-style: none;
+    background-color: darken(map-get($colors,accent-color),2%);
+    padding: .2em 0em .2em 0em;
+    margin-bottom: .5em;
+    transition: all 300ms ease-out;    
+    &:hover{
+    background-color: darken(map-get($colors,font-color),40%);
+    transition: all 300ms ease-out;
+    a{
+      
+        color:darken(map-get($colors,primary-color),20%);
+        transition: all 300ms ease-in-out;      
+        
+    }
+      
+    }
+  }
+  }
+  animation: hide-menu 300ms ease-in-out forwards ;
 }
 .hidden-full-container{
   display: none;
 }
-.shown-full-container{
-  display: block;
-  
-}
+
+
 // .shown-footer{
 //   display: block;
 //   z-index: 30;
@@ -91,11 +160,10 @@
 // .hidden-footer{
 //   display: none;
 // }
-.menu__fullscreen{
- 
- 
-
+.remove-margin-bottom{
+   margin-bottom:0vh; 
 }
+
 /*NAV*/
 .header{
   width: 100%;
@@ -150,8 +218,11 @@
   ABOUT
 */
 .about{
-  height: 95vh;
+  height: 90vh;
+
   .about__text{
+    padding:0em .3em 0em .3em;
+    text-align: center;
     font-size:map-get($font-sizes,font-size-xs);
     line-height: 1.8em;
     a{
@@ -167,6 +238,7 @@
   
   .grid__row{
     justify-content: center;
+    // padding-top: 3em;
   }
   //responsivness on xsmall screens
   .about__grid__item-xs-4{
@@ -175,7 +247,7 @@
     
         max-width: 3em;
         max-height: 4em;
-        margin-bottom: 2em;
+        margin-bottom: 1em;
        
         
       
@@ -183,26 +255,16 @@
     
   }
   .about__grid__item-xs-12{
-    padding: 1em .5em 1em .5em;
+    // padding: .5em .5em .5em .5em;
    
     flex: 0 0 100%;
     
   }
   .about__img {
-    
-    
-   
-    
-    
- 
     img{
       width: 100%;
-      // height: 100%;
       border-radius: 70%;
-    
-    }
-    
-    
+    }    
   }
 }
 
@@ -265,9 +327,8 @@
       position: relative;
     }
     strong{
-      color:darken(map-get($colors,font-color),40%);
-      background-color: darken(map-get($colors,accent-color),2%);
-      border: .5px solid darken(map-get($colors,font-color),20%);
+      color:darken(map-get($colors,accent-color),1%);
+      
       font-size:.8em;
       padding: .1em .1em;
       
@@ -383,6 +444,8 @@
    
     p{
       font-size: .9em;
+    padding: .8em .8em 0em .8em;
+      
     }
     
   }
@@ -437,36 +500,39 @@
   .blog__body{
     perspective: 1000px;
   }
-  width: 100%;
+  width:100%;
   .blog__body__grid__item-xs-12{
-    padding: .74vw;
+    padding: 3vw;
     margin: .75vw;
 
     &:nth-child(1){
-      flex:0 0 calc(100% - 1.5vw);
+      flex:0 0 calc(100% - 3.75vw);
     }
     &:nth-child(2){
-      flex:0 0 calc(100% - 1.5vw);
+      flex:0 0 calc(100% - 3.75vw);
     }
     &:nth-child(3){
-      flex:0 0 calc(100% - 1.5vw);
+      flex:0 0 calc(100% - 3.75vw);
     }
   }
+  //flex for the blog content header
   .blog__body__thumbnail{
+    background: linear-gradient(to right ,darken(map-get($colors,font-color),21%) 20%,darken(map-get($colors,accent-color),21%)) ;
     position: relative; 
-    h4.blog__body__thumbnail__title{
-      position: absolute;
-     
+    display: flex;
+    flex-flow: row ;
     
-     top:10%;
-     margin: 0 auto;
+    .blog__body__thumbnail__img{
+      flex: 0 0 calc(14% - 3em);
+    }
+    .blog__body__content__header{
+      flex: 0 0 calc(86% - 3em);
       
     }
   }
 }
 .blog__inner__body{
   padding: .8em .6em;
-  margin: .3em .3em;
   border:1px map-get($colors,accent-color) solid;
   transition: all 200ms ease-in-out; 
   height: 100%;
@@ -478,26 +544,30 @@
   //styling the content header
   .blog__body__content__header{
     margin-bottom: 1.1em;
-    padding: 0em 0em 0em 0em;
-    overflow: hidden;
+    padding: .8em 0em .9em .3em;
+   
     
-    background-color: darken(map-get($colors,primary-color),21%) ;
+    
     a{
       text-decoration: none;
       color: darken(map-get($colors,font-color),40%);
-      font-size: 1.1em;
+      font-size: 1.6em;
       transition: color 200ms ease-in-out;
       &:hover{
         color:map-get($colors,accent-color);
         transition: color 200ms ease-in-out;
       }
     }
+    small{
+      color: darken(map-get($colors,font-color),5%);
+    }
     
   }
   .blog__body__content__body{
-    overflow: hidden;
+    // overflow: hidden;
     p{
       font-size: .9em;
+      padding :.2em .5em .2em .5em; 
       a{
         text-decoration: none;
      
@@ -515,10 +585,14 @@
     
     
     img{
-     width: 32%;
-     max-width: 174px;;
-     float: left;
-     shape-outside: square(20%);
+     width: 100%;
+     max-width: 9em;
+     min-width: 6em;
+     height: 100%;
+     max-height: 7em;
+     min-height: 5em;
+    //  float: left;
+    //  shape-outside: square(50%);
     }
     
   }
@@ -539,12 +613,15 @@
 
   input{
    
-    width: 100%;
+    width: 90vw;
     height: 10vh;
     margin-bottom: 1em;
 
   }
   textarea{
+    width: 90vw;
+    height: 30vh;
+    margin-bottom: 1em;
     
   }
 }
@@ -553,15 +630,20 @@
   input{
     flex: 0 0 50%;
     background-color: darken(map-get($colors,primary-color),21%);
+    color:darken(map-get($colors,font-color),40%);
     padding: .5em 0em .5em 0em;
     border: 1px solid darken(map-get($colors,primary-color),30%);
+    transform: scale(1);
     transition: all 250ms ease-in-out;
     
-    &:hover{
+    &:hover,
+    &:active,
+    &:focus{
     background-color: darken(map-get($colors,accent-color),1%);
     color: darken(map-get($colors,primary-color),21%);
     padding: .5em 0em .5em 0em;
     border: 1px solid darken(map-get($colors,accent-color),30%);
+    transform: scale(.9);
     transition: all 250ms ease-in-out;
     }
     
@@ -592,7 +674,7 @@ footer{
    
     flex: 0 0 100%;
     .footer__inner{
-      height: 25vh;
+      height: 28vh;
       margin: 0 auto;
       background-color: map-get($colors,accent-color);
       p{
@@ -601,11 +683,93 @@ footer{
       }
       .footer__inner__social{
         margin-top: 1em;
+        padding-bottom: 1em;
+        
         a{
+          position: relative;
           text-decoration: nane;
           color: darken(map-get($colors,font-color),40%);
+          transition: all 200ms ease-in-out;          
+          &:hover{
+            &:nth-child(1){
+              &::before{
+                content:'Behance';
+                text-align: center;
+                position: absolute;
+                bottom: -1em;
+                left:-.5em;  
+                margin: 0 auto;
+                transition: all 0ms 200ms ease-in-out;
+              
+            
+            }
+            }
+            &:nth-child(2){
+              &::before{
+                content:'Facebook';
+                text-align: center;
+                position: absolute;
+                bottom: -1em;
+                left:-1.4em;  
+                margin: 0 auto;
+                transition: all 0ms 200ms ease-in-out;
+              
+            
+            }
+            }
+            &:nth-child(3){
+              &::before{
+                content:'Twitter';
+                text-align: center;
+                position: absolute;
+                bottom: -1em;
+                left:-.6em;  
+                margin: 0 auto;
+                transition: all 0ms 200ms ease-in-out;
+              
+            
+            }
+            }
+            &:nth-child(4){
+              &::before{
+                content:'Gmail';
+                text-align: center;
+                position: absolute;
+                bottom: -1em;
+                left:-.5em;  
+                margin: 0 auto;
+                transition: all 0ms 200ms ease-in-out;
+              
+            
+            }
+            }
+            &:nth-child(5){
+              &::before{
+                content:'LinkedIn';
+                text-align: center;
+                position: absolute;
+                bottom: -1em;
+                left:-.7em;  
+                margin: 0 auto;
+                transition: all 0ms 200ms ease-in-out;
+              
+            
+            }
+            }
+           
+            color:darken(map-get($colors,primary-color),20%);
+            transition: all 0ms 200ms ease-in-out;
+           
+          }
         }
+          a::before{
+            
+              
+            
+          }
+        }
+        
       }
     }
   }
-}
+
