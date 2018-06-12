@@ -153,7 +153,29 @@
   
   width:5%;
   perspective:1000px;
+  //init
+  perspective:1000px;
+  line
+  {
+     &:nth-of-type(1)
+    {
+      stroke-dasharray:50;
+      stroke-dashoffset:20;
+      
+      
+    }
+    &:nth-of-type(2)
+    {
 
+      stroke-dasharray:60;
+      stroke-dashoffset:25;
+    }
+    &:nth-of-type(3)
+    {
+      stroke-dasharray:70;
+      stroke-dashoffset:30;
+    }
+  } 
     &:hover,
     &:focus,
     &:active
@@ -165,22 +187,23 @@
         {
            &:nth-of-type(1)
           {
-            transform-origin:center bottom  ;
-            animation: menu-first-bar-animate 100ms ease forwards ; 
-            animation-delay:100ms;
+            animation: bar-animate 300ms linear forwards alternate infinite; 
+            stroke-dasharray:50;
+            stroke-dashoffset:20;
+            
           }
           &:nth-of-type(2)
           {
-            // transform-origin:center bottom  ;
-            // animation: menu-first-bar-animate .8s ease forwards ; 
-            // animation-delay:300ms;
-            display:none;
+   
+            animation:bar-animate 300ms linear forwards alternate; 
+            stroke-dasharray:60;
+            stroke-dashoffset:25;
           }
           &:nth-of-type(3)
           {
-            transform-origin:center bottom  ;
-            animation: menu-second-bar-animate 100ms ease  forwards; 
-            animation-delay:100ms;
+            animation: bar-animate 300ms linear forwards alternate; 
+            stroke-dasharray:70;
+            stroke-dashoffset:30;
           }
         }   
       }

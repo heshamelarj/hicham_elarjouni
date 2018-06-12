@@ -4,16 +4,17 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  position: static;
 }
 body{
-  perspective: 1000px;
+  // perspective: 1000px;
   height: 100%;
   width:100%;
   font-family:'Verdana';
   background-color: map-get($colors,bg-color);
   color:map-get($colors,font-color);
-
-    margin-bottom: 23vh; //for the effect fors fixed footer
+  
+  margin-bottom: 23vh; //for the effect fors fixed footer
 
   z-index: 20;
 }
@@ -22,7 +23,7 @@ body{
   // border: .6em darken(map-get($colors,font-color),20%) solid;
   background-color: map-get($colors,bg-color);
   // margin-bottom: 23vh; //for the effect fors fixed footer
-  
+ 
   
  
 }
@@ -48,16 +49,8 @@ body{
     color: #849495;
     border-style: solid;
     border-width: .5px;
-    // border-width:2px;
-    // border-color: map-get($colors,accent-color);
+  
     transition: all 300ms ease-in-out;
-    // &:hover,
-    // &:focus
-    // {
-    //   border-style: solid;
-    //   border-width: .5px;
-    //   border-color:map($colors,primary-color); 
-    //   transition: all 300ms ease-in-out;
-    // }
+  
   }
     

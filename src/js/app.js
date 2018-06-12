@@ -5,24 +5,55 @@ document.querySelector('#menu__fullscreen').classList.add('hidden-responsive-men
 var menuIcon = document.querySelector('.menu');
 menuIcon.addEventListener('click',function(e){
 e.preventDefault();
-document.querySelector('#menu__fullscreen').classList.remove('hidden-responsive-menu');
-document.querySelector('#menu__fullscreen').classList.add('shown-responsive-menu');
-document.querySelector('#full-container').classList.add('hidden-full-container');
-document.querySelector('footer').classList.add('hidden-full-container');    
+removeClassFromElement('#menu__fullscreen','hidden-responsive-menu');
+addClassToElement('#menu__fullscreen','shown-responsive-menu');
+
+addClassToElement('#full-container','hidden-full-container');
+addClassToElement('footer','hidden-full-container');    
 //remove the body margin-bottom 
-document.querySelector('body').classList.add('remove-margin-bottom');
+addClassToElement('body','remove-margin-bottom');
 
 }) ;
 
 var closeMenuIcon = document.querySelector('#closeFullscreenMenu');
 closeMenuIcon.addEventListener('click',function(e){
   e.preventDefault();
-  document.querySelector('#menu__fullscreen').classList.remove('shown-responsive-menu');
-  document.querySelector('#menu__fullscreen').classList.add('hidden-responsive-menu');
-  document.querySelector('#full-container').classList.remove('hidden-full-container');
-  document.querySelector('footer').classList.remove('hidden-full-container');
+  removeClassFromElement('#menu__fullscreen','shown-responsive-menu');
+  addClassToElement('#menu__fullscreen','hidden-responsive-menu');
+  removeClassFromElement('#full-container','hidden-full-container');
+  removeClassFromElement('footer','hidden-full-container');
   //Add back the body margin-bottom
-  document.querySelector('body').classList.remove('remove-margin-bottom');
+  removeClassFromElement('body','remove-margin-bottom');
 });
-//when click on links
+//remove / add classes function 
+var element,className;
+function addClassToElement(element,className){
+  document.querySelector(element).classList.add(className);
+}
+function removeClassFromElement(element,className){
+  document.querySelector(element).classList.remove(className);
+}
+//hide menu if parent pos not top
+var menu1 = document.querySelector('.menu-1');
+var aboutBody = document.querySelector('.about');
+var workBody = document.querySelector('.work__body');
+var menu2 = document.querySelector('.menu-2');
+var menu3 = document.querySelector('.menu-3');
+window.addEventListener('scroll',function(e){
+  
+  
+ if(menu1.clientHeight + workBody.clientHeight <= window.outerHeight){
+   console.log('show menu');
+   
+ }
+
+})
+
+
+
+
+
+
+
+
 

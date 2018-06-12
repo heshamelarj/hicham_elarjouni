@@ -15,19 +15,72 @@
   .menu__fullscreen--close{
     align-self: flex-start;
     position: absolute;
-    right: 0em;
-    top:-.3em;
-    a{
-      color:darken(map-get($colors,accent-color),2%);      
-      text-decoration: none;
-      transition: all 300ms ease-in-out;      
-      font-family: 'Josifin Lab';
-      &:hover{
-          color: darken(map-get($colors,primary-color),20%);
-          
-          transition: all 300ms ease-in-out;      
+    right: .2em;
+    top:.4em;
+    transform:scale(.5);
+    .menu-bars
+      {
+         perspective:1000px;
+        line
+        {
+           &:nth-of-type(1)
+          {
+            
+            transform-origin:center bottom  ;
+            animation: menu-first-bar-animate 100ms ease forwards ; 
+            animation-delay:100ms;
+          }
+          &:nth-of-type(2)
+          {
+            // transform-origin:center bottom  ;
+            // animation: menu-first-bar-animate .8s ease forwards ; 
+            // animation-delay:300ms;
+            display:none;
+          }
+          &:nth-of-type(3)
+          {
+            transform-origin:center bottom  ;
+            animation: menu-second-bar-animate 100ms ease  forwards; 
+            animation-delay:100ms;
+          }
+        }   
+      }
+      &:hover,
+    &:focus,
+    &:active
+    {
+      .menu-bars
+      {
+         perspective:1000px;
+        line
+        {
+           &:nth-of-type(1)
+          {
+            animation: bar-animate 300ms linear forwards alternate infinite; 
+            stroke-dasharray:50;
+            stroke-dashoffset:20;
+            
+          }
+          &:nth-of-type(2)
+          {
+            display: block;
+            animation:bar-animate 300ms linear forwards alternate; 
+            stroke-dasharray:60;
+            stroke-dashoffset:25;
+          }
+          &:nth-of-type(3)
+          {
+            animation: bar-animate 300ms linear forwards alternate; 
+            stroke-dasharray:70;
+            stroke-dashoffset:30;
+          }
+        }   
       }
     }
+    .menu__fullscreen__menu--close{
+
+    }
+    
  
   }
   a{
@@ -52,19 +105,23 @@
     justify-content: center;
   li{
     text-align: center;
+    
     width: 80vw;
-    height: 10vh;
+    // height: 15vh;
     flex:0 0 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
     list-style: none;
     background-color: darken(map-get($colors,accent-color),2%);
-    padding: .2em 0em .2em 0em;
-    margin-bottom: .5em;
+    padding: .8em 0em .8em 0em;
+    margin-bottom: 1em;
     transition: all 300ms ease-out;    
     &:hover{
     background-color: darken(map-get($colors,font-color),40%);
     transition: all 300ms ease-out;
     a{
-      
+
         color:darken(map-get($colors,primary-color),20%);
         transition: all 300ms ease-in-out;      
         
@@ -77,89 +134,12 @@
   
 }
 .hidden-responsive-menu{
-  transform-origin: top center;
-  height: 60%;
-  width: 100%;
-  height: 100vh;
-  
-  
-  background-color: darken(map-get($colors,font-color),40%);
-  //stying the close button
-  .menu__fullscreen--close{
-    align-self: flex-start;
-    position: absolute;
-    right: 0em;
-    top:-.3em;
-    a{
-      color:darken(map-get($colors,accent-color),2%);      
-      text-decoration: none;
-      transition: all 300ms ease-in-out;      
-      font-family: 'Josifin Lab';
-      &:hover{
-          color: darken(map-get($colors,primary-color),20%);
-          
-          transition: all 300ms ease-in-out;      
-      }
-    }
- 
-  }
-  a{
-    text-decoration: none;
-    color: darken(map-get($colors,font-color),40%);
-    
-    
-  }
-  //styling nav
-  .menu__fullscreen__nav{
-    padding-top: 3em;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  ul{
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-  li{
-    text-align: center;
-    width: 80vw;
-    height: 10vh;
-    flex:0 0 90%;
-    list-style: none;
-    background-color: darken(map-get($colors,accent-color),2%);
-    padding: .2em 0em .2em 0em;
-    margin-bottom: .5em;
-    transition: all 300ms ease-out;    
-    &:hover{
-    background-color: darken(map-get($colors,font-color),40%);
-    transition: all 300ms ease-out;
-    a{
-      
-        color:darken(map-get($colors,primary-color),20%);
-        transition: all 300ms ease-in-out;      
-        
-    }
-      
-    }
-  }
-  }
-  animation: hide-menu 300ms ease-in-out forwards ;
+  display:none; 
 }
 .hidden-full-container{
   display: none;
 }
 
-
-// .shown-footer{
-//   display: block;
-//   z-index: 30;
-// }
-// .hidden-footer{
-//   display: none;
-// }
 .remove-margin-bottom{
    margin-bottom:0vh; 
 }
@@ -170,50 +150,44 @@
   background-color: darken(map-get($colors,primary-color),20%);
   height: 2.8em;
   margin-bottom: 1em;
+
 }
 .header__nav{
   width: 100%;
   display: flex;
-  // padding-top: .2em;
-  // padding-bottom: .2em;
+
   
 
   li.header__nav__item{
     display: none;
     
   }
-  .logo{
-    width: 5em;
-    transform:scale(.6);
-    margin-right:  auto;
-    position: fixed;
-    left:-.5em;
-    top:-.2em;
-    z-index: 11;
-   
-    
-    
-    
-   
-    
-  }
   .menu{
     width: 5em;
     position: fixed;
     right: -.5em;
-    top:0em;
-    z-index: 11;
-    
-    // margin-right: .1em;
+    top:0em;    
+    z-index: 20;
     transform: scale(.6);
     li{
       margin-left:  auto;
-     
-      // right: 0px;
     }
     
   }
+ 
 }
+
+.logo{
+  width: 5em;
+  transform:scale(.6);
+  margin-right:  auto;
+  position: relative;
+  left:-.3em;
+  top:-.3em;
+  
+}
+
+
 /*
   ABOUT
 */
@@ -292,6 +266,9 @@
   margin-bottom: 1em;
   margin-top: 1em;
   z-index: 10;
+  .section__h3{
+    margin-right: auto;
+  }
  
 }
 .work__header__grid__item-xs-12{
@@ -652,7 +629,7 @@
 footer{
   width: 98%;
   position: fixed;
-  bottom: 0;
+  bottom:0;
   right: 0;
   left: 0;
   // width: 100%;
@@ -762,11 +739,7 @@ footer{
            
           }
         }
-          a::before{
-            
-              
-            
-          }
+        
         }
         
       }
