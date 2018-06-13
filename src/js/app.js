@@ -5,25 +5,29 @@ document.querySelector('#menu__fullscreen').classList.add('hidden-responsive-men
 var menuIcon = document.querySelector('.menu');
 menuIcon.addEventListener('click',function(e){
 e.preventDefault();
-removeClassFromElement('#menu__fullscreen','hidden-responsive-menu');
-addClassToElement('#menu__fullscreen','shown-responsive-menu');
+activateCurrentSection();
+hideContainer();
+//print the id of the active section
+//reset the styling class for all the links
+var links = document.querySelectorAll('.menu__fullscreen__inner__nav__item a');
+links.forEach(function(link){
+  link.classList.add('menu__fullscreen__inner__nav__link');
+})
+// now add class of highlighted to the active link
 
-addClassToElement('#full-container','hidden-full-container');
-addClassToElement('footer','hidden-full-container');    
-//remove the body margin-bottom 
-addClassToElement('body','remove-margin-bottom');
+var link = document.querySelector('a[href="#'+activeSectionId+'"]');
+link.classList.remove('menu__fullscreen__inner__nav__link');
+link.classList.add('highlight-link');
+console.log(link);
+
+
 
 }) ;
 
 var closeMenuIcon = document.querySelector('#closeFullscreenMenu');
 closeMenuIcon.addEventListener('click',function(e){
   e.preventDefault();
-  removeClassFromElement('#menu__fullscreen','shown-responsive-menu');
-  addClassToElement('#menu__fullscreen','hidden-responsive-menu');
-  removeClassFromElement('#full-container','hidden-full-container');
-  removeClassFromElement('footer','hidden-full-container');
-  //Add back the body margin-bottom
-  removeClassFromElement('body','remove-margin-bottom');
+  hideMenu();
 });
 //remove / add classes function 
 var element,className;
@@ -33,21 +37,49 @@ function addClassToElement(element,className){
 function removeClassFromElement(element,className){
   document.querySelector(element).classList.remove(className);
 }
-//hide menu if parent pos not top
-var menu1 = document.querySelector('.menu-1');
-var aboutBody = document.querySelector('.about');
-var workBody = document.querySelector('.work__body');
-var menu2 = document.querySelector('.menu-2');
-var menu3 = document.querySelector('.menu-3');
-window.addEventListener('scroll',function(e){
-  
-  
- if(menu1.clientHeight + workBody.clientHeight <= window.outerHeight){
-   console.log('show menu');
-   
- }
+//make xs menu navigation works 
+var fullscreenMenu = document.querySelector('.menu__fullscreen');
 
-})
+//Add event listener
+fullscreenMenu.addEventListener('click',getLink);
+
+//getLink function
+function getLink(e){
+
+  //get the parent of links
+  if(e.target.classList.contains('menu__fullscreen__inner__nav__link')){
+    
+    hideMenu();
+    //go link
+    setInterval(scrollToSection(e.target),3000);
+    e.preventDefault();
+
+  }
+}
+
+//hide menu fisrt
+function hideMenu(){
+  //hide menu and bring the body back
+  removeClassFromElement('#menu__fullscreen','shown-responsive-menu');
+  addClassToElement('#menu__fullscreen','hidden-responsive-menu');
+  removeClassFromElement('#full-container','hidden-full-container');
+  removeClassFromElement('footer','hidden-full-container');
+  //Add back the body margin-bottom
+  removeClassFromElement('body','remove-margin-bottom');
+}
+function hideContainer(){
+  removeClassFromElement('#menu__fullscreen','hidden-responsive-menu');
+addClassToElement('#menu__fullscreen','shown-responsive-menu');
+
+addClassToElement('#full-container','hidden-full-container');
+addClassToElement('footer','hidden-full-container');    
+//remove the body margin-bottom 
+addClassToElement('body','remove-margin-bottom');
+}
+//go tolink function
+document.addEventListener('scroll',activateCurrentSection);
+/* JQUERY PARTS*/
+
 
 
 

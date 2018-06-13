@@ -83,7 +83,6 @@
   }
   a{
     text-decoration: none;
-    color: darken(map-get($colors,font-color),40%);
     
     
   }
@@ -104,26 +103,32 @@
   li{
     text-align: center;
     
-    width: 80vw;
     // height: 15vh;
     flex:0 0 90%;
     display: flex;
     align-items: center;
     justify-content: center;    
     list-style: none;
-    background-color: darken(map-get($colors,accent-color),2%);
-    padding: .8em 0em .8em 0em;
-    margin-bottom: 1em;
-    transition: all 300ms ease-out;    
-    &:hover{
-    background-color: darken(map-get($colors,font-color),40%);
-    transition: all 300ms ease-out;
-    a{
-
-        color:darken(map-get($colors,primary-color),20%);
+      
+  
+    
+    .menu__fullscreen__inner__nav__link{  
+        width: 80vw;    
+        background-color: darken(map-get($colors,accent-color),2%);
+        padding: .8em 0em .8em 0em;
+        margin-bottom: 1em;
+        transition: all 300ms ease-out;  
+        color:darken(map-get($colors,font-color),40%);
+        border: none;
         transition: all 300ms ease-in-out;      
-        
-    }
+        &:hover,
+        &:active,
+        &:focus{
+          background-color: darken(map-get($colors,primary-color),20%);
+          color: darken(map-get($colors,font-color),40%);
+          transition: all 300ms ease-out;
+        }
+    
       
     }
   }
@@ -142,6 +147,16 @@
    margin-bottom:0vh; 
 }
 
+//highlight link class
+.highlight-link{
+  width: 80vw;
+  padding: .8em 0em .8em 0em;
+  margin-bottom: 1em;
+  background-color: darken(map-get($colors,font-color),40%);
+  color: darken(map-get($colors,accent-color),1%);
+  border-bottom: 1px  map-get($colors,accent-color) solid;
+  transition: all 300ms ease-out;
+}
 /*NAV*/
 .header{
   width: 100%;
@@ -221,19 +236,89 @@
     
   }
   .about__text{
+    display: flex;
+    flex-flow: row wrap;
+    
+    align-content: center;
+    align-items: center;
+    .about__text__item-xs-12{
+      flex: 0 0 90%;
+ 
+    }
     h3{
-      text-align: center;
       margin-bottom: .2em;
     }
+    p{
+      // text-align: center;
+      flex: 0 0 100%;
+    }
+    .line-1,.line-2,.line-3,.line-4,.line-5,.line-6,.line-7,.about__text__header{
+      
+      position: relative;
+      // border-right:2px solid rgba(255,255,255,.75);
+      white-space: nowrap;
+      text-align: center;
+      font-size: map-get($font-sizes,font-size-xs);
+      line-height: 2.8em;
+      margin: 0 auto;
+      
+      overflow: hidden;
+      // width: 100vw;
+  
+      
+    }
+    .animate-typewriter-0{
+      animation : typewriter 1s steps(40) 1s 1 normal both;
+ 
+    }
+    .animate-typewriter-1{
+      animation : typewriter 2s steps(190) 3s 1 normal both;
+
+    }
+    .animate-typewriter-2{
+      animation : typewriter 2s steps(190) 5s 1 normal both;
+
+    }
+    .animate-typewriter-3{
+      animation : typewriter 2s steps(190) 7s 1 normal both;
+
+    }
+    .animate-typewriter-4{
+      animation : typewriter 2s steps(190) 9s 1 normal both;
+
+    }
+    .animate-typewriter-5{
+      animation : typewriter 2s steps(190) 11s 1 normal both;
+
+    }
+    .animate-typewriter-6{
+      animation : typewriter 2s steps(190) 13s 1 normal both;
+
+    }
+    .animate-typewriter-7{
+      animation : typewriter 2s steps(190) 15s 1 normal both;
+
+    }
+    
     text-align: justify;
     padding:.5em .3em 2em .3em;
     font-weight: 100;
     // text-align: center;
     font-size:map-get($font-sizes,font-size-xs);
-    line-height: 1.3em;
+    line-height: 1.4em;
     a{
       text-decoration: none;
       color: darken(map-get($colors,accent-color),2%);
+      position: relative;
+      &::before{
+        content: '';
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        bottom: 0em;
+        background-color: darken(map-get($colors,primary-color),20%);
+        left:-.1em;
+      }
       &:hover{
       color:darken(map-get($colors,font-color),40%);
       transition:color 300ms ease-in-out;         
@@ -341,15 +426,16 @@
 .work{
   width: 100%;
   
- 
+ perspective: 1000px;
   .project{
     //animation the project item when hover
-    transform: scale(.9) translate(-3px);
+    transform: scale(.9) rotateX(0deg) ;
+    transform-origin:top center; 
     
       transition: all 100ms ease-in-out;
     &:hover{
       box-shadow: 2px 4px 10px rgba(118, 183, 220, 0.329);
-      transform: scale(1) translate(2px);
+      transform:scale(.9)  rotateX(-25deg);
       border: none;
       transition: all 200ms ease-in-out;
     }
@@ -399,7 +485,7 @@
     .project__thumbnail__button{
       // position: absolute;
       
-      padding: 1.6em .4em;
+      padding: 2em .4em;
       color:darken(map-get($colors,font-color),40%);
       background-color: darken(map-get($colors,primary-color),20%);
       text-decoration: none;

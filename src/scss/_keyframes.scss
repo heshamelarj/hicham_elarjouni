@@ -113,26 +113,17 @@
 @keyframes show-menu{
   0%{
     opacity: 0;
-    transform:rotateX(300deg) translateY(-30vh)
+    transform: translateY(-30vh)
   }
  
-  50%{
-    opacity: .8;
-    transform: translateY(10vh);
-
-  }
-80%{
-   
-    transform:rotateX(60deg) translateY(-9vh);
-
-  }
-  90%{
-   
-    transform:rotateX(-60deg) translateY(9vh);
-
-  }
+  
   100%{
     opacity: 1;
-    transform:rotateX(0deg) translateY(0vh);
+    transform: translateY(0vh);
   }
+}//typewriter effect 
+
+@keyframes typewriter{
+  from{width: 0vw}
+  to{width: 90vw}
 }
