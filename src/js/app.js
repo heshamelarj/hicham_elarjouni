@@ -1,7 +1,6 @@
 /*SHOW/HIDE menu when XS*/
 document.querySelector('#menu__fullscreen').classList.add('hidden-responsive-menu');
-
-
+var linkWasActive;
 var menuIcon = document.querySelector('.menu');
 menuIcon.addEventListener('click',function(e){
 e.preventDefault();
@@ -14,7 +13,6 @@ links.forEach(function(link){
   link.classList.add('menu__fullscreen__inner__nav__link');
 })
 // now add class of highlighted to the active link
-
 var link = document.querySelector('a[href="#'+activeSectionId+'"]');
 link.classList.remove('menu__fullscreen__inner__nav__link');
 link.classList.add('highlight-link');
@@ -27,7 +25,11 @@ console.log(link);
 var closeMenuIcon = document.querySelector('#closeFullscreenMenu');
 closeMenuIcon.addEventListener('click',function(e){
   e.preventDefault();
+  // setInterval(scrollToSection(activeSectionId),3000);
   hideMenu();
+console.log('link beeing activated before close '+linkWasActive);
+  
+  setInterval(scrollToSection(linkWasActive),3000);
 });
 //remove / add classes function 
 var element,className;
@@ -52,6 +54,7 @@ function getLink(e){
     hideMenu();
     //go link
     setInterval(scrollToSection(e.target),3000);
+    linkWasActive=e.target;
     e.preventDefault();
 
   }
