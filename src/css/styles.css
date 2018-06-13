@@ -13,7 +13,7 @@ body {
   font-family: 'Verdana';
   background-color: #161414;
   color: #979494;
-  margin-bottom: 23vh;
+  margin-bottom: 8em;
   z-index: 20; }
 
 .full-container {
@@ -31,7 +31,7 @@ body {
   bottom: 0; }
 
 a, input, button {
-  font-family: 'Josifin Lab';
+  font-family: 'Josifin Lab','Roboto','Verdana';
   font-weight: 800; }
 
 input, textarea {
@@ -880,25 +880,13 @@ input, textarea {
     margin-right: auto;
     position: relative;
     left: -.3em;
-    top: -.3em; }
+    top: -.1em; }
   /*
   ABOUT
 */
   .about {
     height: 90vh;
     width: 100%; }
-    .about .about__text {
-      padding: 0em .3em 0em .3em;
-      text-align: center;
-      font-size: 14px;
-      line-height: 1.8em; }
-      .about .about__text a {
-        text-decoration: none;
-        color: #c3844a; }
-        .about .about__text a:hover {
-          color: #302f2f;
-          -webkit-transition: color 300ms ease-in-out;
-          transition: color 300ms ease-in-out; }
     .about .grid__row {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
@@ -914,6 +902,22 @@ input, textarea {
       -webkit-box-flex: 0;
           -ms-flex: 0 0 100%;
               flex: 0 0 100%; }
+    .about .about__text {
+      text-align: justify;
+      padding: .5em .3em 2em .3em;
+      font-weight: 100;
+      font-size: 14px;
+      line-height: 1.3em; }
+      .about .about__text h3 {
+        text-align: center;
+        margin-bottom: .2em; }
+      .about .about__text a {
+        text-decoration: none;
+        color: #c3844a; }
+        .about .about__text a:hover {
+          color: #302f2f;
+          -webkit-transition: color 300ms ease-in-out;
+          transition: color 300ms ease-in-out; }
     .about .about__img img {
       width: 100%;
       border-radius: 70%; }
@@ -1244,7 +1248,7 @@ input, textarea {
     right: 0;
     left: 0;
     z-index: -1;
-    margin-top: 1em;
+    margin-top: 0em;
     color: #2d7fb0; }
     footer .grid__row {
       margin-left: -.5em;
@@ -1266,15 +1270,16 @@ input, textarea {
           -ms-flex: 0 0 100%;
               flex: 0 0 100%; }
       footer .footer__grid__item-xs-6 .footer__inner {
-        height: 28vh;
+        height: 8em;
         margin: 0 auto;
         background-color: #C68952; }
         footer .footer__grid__item-xs-6 .footer__inner p {
           text-align: center;
-          padding-top: 1em; }
+          padding-top: 1em;
+          color: #302f2f; }
         footer .footer__grid__item-xs-6 .footer__inner .footer__inner__social {
           margin-top: 1em;
-          padding-bottom: 1em; }
+          padding-bottom: .1em; }
           footer .footer__grid__item-xs-6 .footer__inner .footer__inner__social a {
             position: relative;
             -webkit-text-decoration: nane;
@@ -1290,44 +1295,49 @@ input, textarea {
                 content: 'Behance';
                 text-align: center;
                 position: absolute;
-                bottom: -1em;
+                bottom: -1.5em;
                 left: -.5em;
                 margin: 0 auto;
+                color: #302f2f;
                 -webkit-transition: all 0ms 200ms ease-in-out;
                 transition: all 0ms 200ms ease-in-out; }
               footer .footer__grid__item-xs-6 .footer__inner .footer__inner__social a:hover:nth-child(2)::before {
                 content: 'Facebook';
                 text-align: center;
                 position: absolute;
-                bottom: -1em;
+                bottom: -1.5em;
                 left: -1.4em;
                 margin: 0 auto;
+                color: #302f2f;
                 -webkit-transition: all 0ms 200ms ease-in-out;
                 transition: all 0ms 200ms ease-in-out; }
               footer .footer__grid__item-xs-6 .footer__inner .footer__inner__social a:hover:nth-child(3)::before {
                 content: 'Twitter';
                 text-align: center;
                 position: absolute;
-                bottom: -1em;
+                bottom: -1.5em;
                 left: -.6em;
                 margin: 0 auto;
+                color: #302f2f;
                 -webkit-transition: all 0ms 200ms ease-in-out;
                 transition: all 0ms 200ms ease-in-out; }
               footer .footer__grid__item-xs-6 .footer__inner .footer__inner__social a:hover:nth-child(4)::before {
                 content: 'Gmail';
                 text-align: center;
                 position: absolute;
-                bottom: -1em;
+                bottom: -1.5em;
                 left: -.5em;
                 margin: 0 auto;
+                color: #302f2f;
                 -webkit-transition: all 0ms 200ms ease-in-out;
                 transition: all 0ms 200ms ease-in-out; }
               footer .footer__grid__item-xs-6 .footer__inner .footer__inner__social a:hover:nth-child(5)::before {
                 content: 'LinkedIn';
                 text-align: center;
                 position: absolute;
-                bottom: -1em;
+                bottom: -1.5em;
                 left: -.7em;
                 margin: 0 auto;
+                color: #302f2f;
                 -webkit-transition: all 0ms 200ms ease-in-out;
                 transition: all 0ms 200ms ease-in-out; } }

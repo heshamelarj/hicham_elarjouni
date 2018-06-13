@@ -14,7 +14,7 @@ body{
   background-color: map-get($colors,bg-color);
   color:map-get($colors,font-color);
   
-  margin-bottom: 23vh; //for the effect fors fixed footer
+  margin-bottom: 8em; //for the effect fors fixed footer
 
   z-index: 20;
 }
@@ -23,7 +23,6 @@ body{
   // border: .6em darken(map-get($colors,font-color),20%) solid;
   background-color: map-get($colors,bg-color);
   // margin-bottom: 23vh; //for the effect fors fixed footer
- 
   
  
 }
@@ -41,7 +40,7 @@ body{
    bottom: 0;
   }
   a,input,button{
-    font-family: 'Josifin Lab';
+    font-family: 'Josifin Lab','Roboto','Verdana';
     font-weight: 800;
   }
   input,textarea{
