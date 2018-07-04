@@ -5,9 +5,11 @@
 
 // init nav object from dom
 var nav = $('nav');
+var menuHeight = $('#menu__fullscreen');
 // get heigth of the nav
 var navHeight = nav.outerHeight();
-
+var targetPos;
+var href ; 
 // click-trigger
 $('a[href*="#"]:not([href="#"])').click(function(event) {
   scrollToSection(this);
@@ -22,22 +24,32 @@ $(document).scroll(function() {
 // get target position and scrolls to it
 function scrollToSection(self) {
   // get the target href
-  var href = $(self).attr('href');
-
+   href = $(self).attr('href');
+    
+    
   // get the target position
   if(href == "#about"){
-  var targetPos = $(href).offset().top - navHeight + 5;
+   targetPos = $(href).offset().top - navHeight + 5;
+  
+  
+  }else if(href == "#about" && $(self).hasClass('scroll-to-menu')){
+    console.log('we are in the condition');
     
-  }
-  else{
-    var targetPos = $(href).offset().top;//modifier this to adjust to my design
-
-  }
-
+    targetPos = $(href).offset().top - menuHeight.outerHeight();
+   
+   
+ }else {
+  targetPos = $(href).offset().top;//modifier this to adjust to my design
+ 
+ 
+}
+ 
+ 
+  
   // scroll to target
   $('html, body').animate({
     scrollTop: targetPos
-  }, 1000);
+  }, 2000);
 }
 
 /*
@@ -57,9 +69,12 @@ function activateCurrentSection() {
 
   // get all sections
   var sections = $('.section');
-
+  
+  
   // store current position on the page when scroll is triggered
   var pos = $(document).scrollTop();
+  // console.log('pso scroll doc '+pos);
+  
 
   /*
   * Exception: if last section is <100% of the screen height
