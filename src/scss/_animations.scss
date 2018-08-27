@@ -8,7 +8,7 @@
      // RECT ANIMATION 
      rect
      {
-        animation : moveRectBAck 2s ease-in forwards;
+        animation : moveRectBAck 2s ease-in forwards 
       }
     //initila styling for the animation of teh svg
         .l-name:not(:first-child)

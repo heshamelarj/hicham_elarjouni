@@ -12,6 +12,8 @@ var element,className;
 /*SHOW/HIDE menu when XS*/
 fullscreenMenu.classList.add('hidden-responsive-menu');
 
+
+
 menuIcon.addEventListener('click',function(e){
    
     e.preventDefault();
@@ -40,8 +42,10 @@ menuIcon.addEventListener('click',function(e){
 
 }) ;
 
+
 closeMenuIcon.addEventListener('click',function(e){
     e.preventDefault();
+    
     // setInterval(scrollToSection(activeSectionId),3000);
     showMenuIcon();
     hideMenu();
@@ -67,7 +71,7 @@ function getLink(e){
 
   //get the parent of links
   if(e.target.classList.contains('menu__fullscreen__inner__nav__link')){
-    
+  
     hideMenu();
     //go link
     setInterval(scrollToSection(e.target),3000);
