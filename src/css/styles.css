@@ -40,6 +40,7 @@ input, textarea {
   border-style: solid;
   border-width: .5px;
   -webkit-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out; }
 
 .about, .work, .blog, .contact {
@@ -306,6 +307,7 @@ input, textarea {
   .logo .l-name:not(:first-child) line:nth-child(2),
   .logo .l-name:not(:first-child) polygon:nth-child(2) {
     -webkit-transform: translateY(-9em);
+        -ms-transform: translateY(-9em);
             transform: translateY(-9em);
     opacity: 0; }
   .logo .l-name:not(:first-child) path:nth-child(3),
@@ -313,6 +315,7 @@ input, textarea {
   .logo .l-name:not(:first-child) line:nth-child(3),
   .logo .l-name:not(:first-child) polygon:nth-child(3) {
     -webkit-transform: translateY(-9em);
+        -ms-transform: translateY(-9em);
             transform: translateY(-9em);
     opacity: 0; }
   .logo .l-name:not(:first-child) path:nth-child(4),
@@ -320,6 +323,7 @@ input, textarea {
   .logo .l-name:not(:first-child) line:nth-child(4),
   .logo .l-name:not(:first-child) polygon:nth-child(4) {
     -webkit-transform: translateY(-9em);
+        -ms-transform: translateY(-9em);
             transform: translateY(-9em);
     opacity: 0; }
   .logo .l-name:not(:first-child) path:nth-child(5),
@@ -327,6 +331,7 @@ input, textarea {
   .logo .l-name:not(:first-child) line:nth-child(5),
   .logo .l-name:not(:first-child) polygon:nth-child(5) {
     -webkit-transform: translateY(-9em);
+        -ms-transform: translateY(-9em);
             transform: translateY(-9em);
     opacity: 0; }
   .logo .l-name:not(:first-child) path:nth-child(6),
@@ -334,6 +339,7 @@ input, textarea {
   .logo .l-name:not(:first-child) line:nth-child(6),
   .logo .l-name:not(:first-child) polygon:nth-child(6) {
     -webkit-transform: translateY(-9em);
+        -ms-transform: translateY(-9em);
             transform: translateY(-9em);
     opacity: 0; }
   .logo .l-name:not(:first-child) path:nth-child(7),
@@ -341,6 +347,7 @@ input, textarea {
   .logo .l-name:not(:first-child) line:nth-child(7),
   .logo .l-name:not(:first-child) polygon:nth-child(7) {
     -webkit-transform: translateY(-9em);
+        -ms-transform: translateY(-9em);
             transform: translateY(-9em);
     opacity: 0; }
   .logo .l-name:not(:first-child) path:nth-child(8),
@@ -348,6 +355,7 @@ input, textarea {
   .logo .l-name:not(:first-child) line:nth-child(8),
   .logo .l-name:not(:first-child) polygon:nth-child(8) {
     -webkit-transform: translateY(-9em);
+        -ms-transform: translateY(-9em);
             transform: translateY(-9em);
     opacity: 0; }
   .logo .l-name:not(:first-child) path:nth-child(9),
@@ -355,6 +363,7 @@ input, textarea {
   .logo .l-name:not(:first-child) line:nth-child(9),
   .logo .l-name:not(:first-child) polygon:nth-child(9) {
     -webkit-transform: translateY(-9em);
+        -ms-transform: translateY(-9em);
             transform: translateY(-9em);
     opacity: 0; }
   .logo .l-name:not(:first-child) path:nth-child(10),
@@ -362,6 +371,7 @@ input, textarea {
   .logo .l-name:not(:first-child) line:nth-child(10),
   .logo .l-name:not(:first-child) polygon:nth-child(10) {
     -webkit-transform: translateY(-9em);
+        -ms-transform: translateY(-9em);
             transform: translateY(-9em);
     opacity: 0; }
   .logo .l-name:not(:first-child) path:nth-child(11),
@@ -369,45 +379,53 @@ input, textarea {
   .logo .l-name:not(:first-child) line:nth-child(11),
   .logo .l-name:not(:first-child) polygon:nth-child(11) {
     -webkit-transform: translateY(-9em);
+        -ms-transform: translateY(-9em);
             transform: translateY(-9em);
     opacity: 0; }
   .logo .l-name:not(:first-child) path:nth-of-type(1) {
     -webkit-transform: translateX(0em);
+        -ms-transform: translateX(0em);
             transform: translateX(0em); }
   .logo .f-name path:nth-child(1),
   .logo .f-name polyline:nth-child(1),
   .logo .f-name line:nth-child(1) {
     -webkit-transform: translateX(0em);
+        -ms-transform: translateX(0em);
             transform: translateX(0em);
     opacity: 0; }
   .logo .f-name path:nth-child(2),
   .logo .f-name polyline:nth-child(2),
   .logo .f-name line:nth-child(2) {
     -webkit-transform: translateX(0em);
+        -ms-transform: translateX(0em);
             transform: translateX(0em);
     opacity: 0; }
   .logo .f-name path:nth-child(3),
   .logo .f-name polyline:nth-child(3),
   .logo .f-name line:nth-child(3) {
     -webkit-transform: translateX(0em);
+        -ms-transform: translateX(0em);
             transform: translateX(0em);
     opacity: 0; }
   .logo .f-name path:nth-child(4),
   .logo .f-name polyline:nth-child(4),
   .logo .f-name line:nth-child(4) {
     -webkit-transform: translateX(0em);
+        -ms-transform: translateX(0em);
             transform: translateX(0em);
     opacity: 0; }
   .logo .f-name path:nth-child(5),
   .logo .f-name polyline:nth-child(5),
   .logo .f-name line:nth-child(5) {
     -webkit-transform: translateX(0em);
+        -ms-transform: translateX(0em);
             transform: translateX(0em);
     opacity: 0; }
   .logo .f-name path:nth-child(6),
   .logo .f-name polyline:nth-child(6),
   .logo .f-name line:nth-child(6) {
     -webkit-transform: translateX(0em);
+        -ms-transform: translateX(0em);
             transform: translateX(0em);
     opacity: 0; }
   .logo .f-name {
@@ -531,6 +549,7 @@ input, textarea {
             animation-delay: 300ms; }
   .logo:hover rect, .logo:focus rect, .logo:active rect {
     -webkit-transform-origin: center center;
+        -ms-transform-origin: center center;
             transform-origin: center center;
     -webkit-animation: removeRect 300ms ease-in forwards;
             animation: removeRect 300ms ease-in forwards; }
@@ -720,25 +739,25 @@ input, textarea {
 
 @font-face {
   font-family: "Lato";
-  src: url("../fonts/Lato-Regular.ttf") format("truetype");
+  src: url("../../fonts/Lato-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: "Josifin Lab";
-  src: url("../fonts/JosefinSlab-Regular.ttf") format("truetype");
+  src: url("../../fonts/JosefinSlab-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: "Arvo";
-  src: url("../fonts/Arvo-Regular.ttf") format("truetype");
+  src: url("../../fonts/Arvo-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: "Verdana";
-  src: url("../fonts/Verdana.ttf") format("truetype");
+  src: url("../../fonts/Verdana.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -750,6 +769,7 @@ input, textarea {
   .shown-responsive-menu {
     background-color: #E0E0E0;
     -webkit-transform-origin: center center;
+        -ms-transform-origin: center center;
             transform-origin: center center;
     display: block;
     height: 60%;
@@ -764,12 +784,14 @@ input, textarea {
       right: .2em;
       top: .4em;
       -webkit-transform: scale(0.5);
+          -ms-transform: scale(0.5);
               transform: scale(0.5); }
       .shown-responsive-menu .menu__fullscreen--close .menu-bars {
         -webkit-perspective: 1000px;
                 perspective: 1000px; }
         .shown-responsive-menu .menu__fullscreen--close .menu-bars line:nth-of-type(1) {
           -webkit-transform-origin: center bottom;
+              -ms-transform-origin: center bottom;
                   transform-origin: center bottom;
           -webkit-animation: menu-first-bar-animate 100ms ease forwards;
                   animation: menu-first-bar-animate 100ms ease forwards;
@@ -779,6 +801,7 @@ input, textarea {
           display: none; }
         .shown-responsive-menu .menu__fullscreen--close .menu-bars line:nth-of-type(3) {
           -webkit-transform-origin: center bottom;
+              -ms-transform-origin: center bottom;
                   transform-origin: center bottom;
           -webkit-animation: menu-second-bar-animate 100ms ease  forwards;
                   animation: menu-second-bar-animate 100ms ease  forwards;
@@ -853,15 +876,18 @@ input, textarea {
           padding: .8em 0em .8em 0em;
           margin-bottom: 1em;
           -webkit-transition: all 300ms ease-out;
+          -o-transition: all 300ms ease-out;
           transition: all 300ms ease-out;
           color: #6b6b6b;
           border: none;
           -webkit-transition: all 300ms ease-in-out;
+          -o-transition: all 300ms ease-in-out;
           transition: all 300ms ease-in-out; }
           .shown-responsive-menu ul li .menu__fullscreen__inner__nav__link:hover, .shown-responsive-menu ul li .menu__fullscreen__inner__nav__link:active, .shown-responsive-menu ul li .menu__fullscreen__inner__nav__link:focus {
             background-color: #8a8a8a;
             color: black;
             -webkit-transition: all 300ms ease-out;
+            -o-transition: all 300ms ease-out;
             transition: all 300ms ease-out; }
   .hidden-responsive-menu {
     display: none;
@@ -877,6 +903,7 @@ input, textarea {
     color: #bababa;
     border-bottom: 1px #BDBDBD solid;
     -webkit-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
     transition: all 300ms ease-out; }
   /*NAV*/
   .header {
@@ -898,12 +925,14 @@ input, textarea {
       top: 0em;
       z-index: 20;
       -webkit-transform: scale(0.6);
+          -ms-transform: scale(0.6);
               transform: scale(0.6); }
       .header__nav .menu li {
         margin-left: auto; }
   .logo {
     width: 5em;
     -webkit-transform: scale(0.6);
+        -ms-transform: scale(0.6);
             transform: scale(0.6);
     margin-right: auto;
     position: relative;
@@ -1005,6 +1034,7 @@ input, textarea {
         .about .about__text a:hover {
           color: black;
           -webkit-transition: color 300ms ease-in-out;
+          -o-transition: color 300ms ease-in-out;
           transition: color 300ms ease-in-out; }
     .about .about__img img {
       width: 100%;
@@ -1074,6 +1104,7 @@ input, textarea {
         .work__body__header p strong:hover {
           color: #525252;
           -webkit-transition: all 300ms ease-in-out;
+          -o-transition: all 300ms ease-in-out;
           transition: all 300ms ease-in-out; }
   .work .work__body__grid .work__body__grid__item {
     position: relative; }
@@ -1088,13 +1119,16 @@ input, textarea {
       -webkit-transform: scale(0.9) rotateX(0deg);
               transform: scale(0.9) rotateX(0deg);
       -webkit-transform-origin: top center;
+          -ms-transform-origin: top center;
               transform-origin: top center;
       -webkit-transition: all 100ms ease-in-out;
+      -o-transition: all 100ms ease-in-out;
       transition: all 100ms ease-in-out;
       position: relative; }
       .work .project:hover {
         border: none;
         -webkit-transition: all 200ms ease-in-out;
+        -o-transition: all 200ms ease-in-out;
         transition: all 200ms ease-in-out; }
       .work .project .project__1__thumbnail {
         background-image: url(../img/about_bg_1.jpg);
@@ -1139,6 +1173,7 @@ input, textarea {
           color: #5e5e5e;
           background-color: #b5b5b5;
           -webkit-transition: all 300ms ease-in-out;
+          -o-transition: all 300ms ease-in-out;
           transition: all 300ms ease-in-out; }
     .work .project__desc {
       background-color: #bcbcbc;
@@ -1225,6 +1260,7 @@ input, textarea {
                 flex: 0 0 calc(100% - 3.75vw); }
     .blog .blog__body__thumbnail {
       background: -webkit-gradient(linear, left top, right top, color-stop(20%, #0c0c0c), to(#878787));
+      background: -o-linear-gradient(left, #0c0c0c 20%, #878787);
       background: linear-gradient(to right, #0c0c0c 20%, #878787);
       position: relative;
       display: -webkit-box;
@@ -1246,12 +1282,15 @@ input, textarea {
     padding: .8em .6em;
     border: 1px #BDBDBD solid;
     -webkit-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
     transition: all 200ms ease-in-out;
     height: 100%; }
     .blog__inner__body:hover {
       -webkit-transform: translateX(10px);
+          -ms-transform: translateX(10px);
               transform: translateX(10px);
       -webkit-transition: all 300ms ease-in-out;
+      -o-transition: all 300ms ease-in-out;
       transition: all 300ms ease-in-out; }
     .blog__inner__body .blog__body__content__header {
       margin-bottom: 1.1em;
@@ -1261,10 +1300,12 @@ input, textarea {
         color: black;
         font-size: 1.6em;
         -webkit-transition: color 200ms ease-in-out;
+        -o-transition: color 200ms ease-in-out;
         transition: color 200ms ease-in-out; }
         .blog__inner__body .blog__body__content__header a:hover {
           color: #BDBDBD;
           -webkit-transition: color 200ms ease-in-out;
+          -o-transition: color 200ms ease-in-out;
           transition: color 200ms ease-in-out; }
       .blog__inner__body .blog__body__content__header small {
         color: #757474; }
@@ -1276,10 +1317,12 @@ input, textarea {
         color: #BDBDBD;
         font-size: 1.1em;
         -webkit-transition: color 200ms ease-in-out;
+        -o-transition: color 200ms ease-in-out;
         transition: color 200ms ease-in-out; }
         .blog__inner__body .blog__body__content__body p a:hover {
           color: black;
           -webkit-transition: color 200ms ease-in-out;
+          -o-transition: color 200ms ease-in-out;
           transition: color 200ms ease-in-out; }
     .blog__inner__body .blog__body__thumbnail__img img {
       width: 100%;
@@ -1318,8 +1361,10 @@ input, textarea {
       padding: .5em 0em .5em 0em;
       border: 1px solid #525252;
       -webkit-transform: scale(1);
+          -ms-transform: scale(1);
               transform: scale(1);
       -webkit-transition: all 250ms ease-in-out;
+      -o-transition: all 250ms ease-in-out;
       transition: all 250ms ease-in-out; }
       .contact__body__form__controls input:hover, .contact__body__form__controls input:active, .contact__body__form__controls input:focus {
         background-color: #bababa;
@@ -1327,8 +1372,10 @@ input, textarea {
         padding: .5em 0em .5em 0em;
         border: 1px solid #717171;
         -webkit-transform: scale(0.9);
+            -ms-transform: scale(0.9);
                 transform: scale(0.9);
         -webkit-transition: all 250ms ease-in-out;
+        -o-transition: all 250ms ease-in-out;
         transition: all 250ms ease-in-out; }
   footer {
     width: 98%;
@@ -1375,10 +1422,12 @@ input, textarea {
                     text-decoration: nane;
             color: black;
             -webkit-transition: all 200ms ease-in-out;
+            -o-transition: all 200ms ease-in-out;
             transition: all 200ms ease-in-out; }
             footer .footer__grid__item-xs-6 .footer__inner .footer__inner__social a:hover {
               color: #6b6b6b;
               -webkit-transition: all 0ms 200ms ease-in-out;
+              -o-transition: all 0ms 200ms ease-in-out;
               transition: all 0ms 200ms ease-in-out; }
               footer .footer__grid__item-xs-6 .footer__inner .footer__inner__social a:hover:nth-child(1)::before {
                 content: 'Behance';
@@ -1389,6 +1438,7 @@ input, textarea {
                 margin: 0 auto;
                 color: black;
                 -webkit-transition: all 0ms 200ms ease-in-out;
+                -o-transition: all 0ms 200ms ease-in-out;
                 transition: all 0ms 200ms ease-in-out; }
               footer .footer__grid__item-xs-6 .footer__inner .footer__inner__social a:hover:nth-child(2)::before {
                 content: 'Facebook';
@@ -1399,6 +1449,7 @@ input, textarea {
                 margin: 0 auto;
                 color: black;
                 -webkit-transition: all 0ms 200ms ease-in-out;
+                -o-transition: all 0ms 200ms ease-in-out;
                 transition: all 0ms 200ms ease-in-out; }
               footer .footer__grid__item-xs-6 .footer__inner .footer__inner__social a:hover:nth-child(3)::before {
                 content: 'Twitter';
@@ -1409,6 +1460,7 @@ input, textarea {
                 margin: 0 auto;
                 color: black;
                 -webkit-transition: all 0ms 200ms ease-in-out;
+                -o-transition: all 0ms 200ms ease-in-out;
                 transition: all 0ms 200ms ease-in-out; }
               footer .footer__grid__item-xs-6 .footer__inner .footer__inner__social a:hover:nth-child(4)::before {
                 content: 'Gmail';
@@ -1419,6 +1471,7 @@ input, textarea {
                 margin: 0 auto;
                 color: black;
                 -webkit-transition: all 0ms 200ms ease-in-out;
+                -o-transition: all 0ms 200ms ease-in-out;
                 transition: all 0ms 200ms ease-in-out; }
               footer .footer__grid__item-xs-6 .footer__inner .footer__inner__social a:hover:nth-child(5)::before {
                 content: 'LinkedIn';
@@ -1429,4 +1482,5 @@ input, textarea {
                 margin: 0 auto;
                 color: black;
                 -webkit-transition: all 0ms 200ms ease-in-out;
+                -o-transition: all 0ms 200ms ease-in-out;
                 transition: all 0ms 200ms ease-in-out; } }

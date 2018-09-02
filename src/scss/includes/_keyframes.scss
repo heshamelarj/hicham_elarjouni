@@ -1,0 +1,142 @@
+  /*ANIMATIONS*/ 
+  //RECT 
+  @keyframes moveRectBAck{
+    from{
+      opacity:0;
+    }
+    to{
+      opacity:1;
+      
+    }
+  }
+  @keyframes removeRect{
+    from{
+      opacity:1;
+    }
+    to{
+      opacity:0;
+      
+    }
+  }
+  @keyframes last__name__letters-animate{
+    0%{
+      
+      opacity:0;
+      
+     transform:  rotateY(-200deg) ;
+    }
+    80%{
+      
+      opacity:.2;
+      transform:  rotateY(-10deg);
+    
+    }
+    100%{
+      
+      opacity:1;
+      transform:  rotateY(-10deg);
+    
+    }
+  }
+  @keyframes last__name__letters-animate-out{
+    from{
+      
+      opacity:1;
+      transform:  translateX(0em)   ;
+     
+    }
+    to{
+      
+      opacity:1;
+      
+      transform: translateX(-60em)  ;
+    
+    }
+  }
+    //shrink the E letter 
+    @keyframes  shrink__first__letter{
+      from{transform-origin: bottom left;transform:scaleY(1) ;}
+      to{transform-origin: bottom left;transform:scaleY(.5) translateY(-.3em) ;}
+    }
+     @keyframes  shrink__first__letter-out{
+      from{transform-origin: bottom left;transform:scaleY(.5) ;}
+      to{transform-origin: bottom left;transform:scaleY(1) translateY(0em) ;}
+    }
+    //move ICHAM back a little
+
+    @keyframes move__f_name_back{
+      from{transform: translateX(0em);}
+      to{transform: translateX(-1.8em);}
+    }
+    @keyframes move__f_name_back-out{
+      from{transform: translateX(-1.8em);
+      }
+      to{
+        transform: translateX(0em);
+      }
+    }
+//animate menu icon
+@keyframes bar-animate{
+  to{
+    stroke-dashoffset:0;
+  }
+  
+}
+
+
+    //animate the close  menu icon
+@keyframes menu-first-bar-animate
+{
+  from{
+        transform:rotate(0deg) translateY(0em) translateX(0em)  ;
+
+        }
+  to{
+      transform: rotate(-30deg) translateY(.7em) translateX(.5em);
+      stroke-dashoffset: 0;
+      }
+}
+@keyframes menu-second-bar-animate
+{
+  from{
+        transform:rotate(0deg) translateY(0em) translateX(0em)  ;
+
+        }
+  to{
+      transform: rotate(30deg) translateY(-.4em) translateX(-.7em);
+      stroke-dashoffset: 0;
+      }
+}
+
+//reponsive menu aniamtion 
+
+@keyframes show-menu{
+  0%{
+    opacity: 0;
+    transform: translateY(-30vh)
+  }
+ 
+  
+  100%{
+    opacity: 1;
+    transform: translateY(0vh);
+  }
+}
+@keyframes hide-menu{
+  0%{
+    opacity: 0;
+    transform: translateY(0vh)
+  }
+ 
+  
+  100%{
+    opacity: 1;
+    transform: translateY(-30vh);
+  }
+}
+//typewriter effect 
+
+@keyframes typewriter{
+  from{width: 0vw}
+  to{width: 90vw}
+}

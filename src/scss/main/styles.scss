@@ -1,0 +1,28 @@
+@import '../includes/_variables';
+@import '../includes/_mixins';
+@import '../includes/_normalize';
+
+
+@import '../includes/_keyframes';
+
+@import '../includes/_animations';
+   
+  //include font mixin
+  @include font('Lato','../../fonts/Lato-Regular');
+  @include font('Josifin Lab', '../../fonts/JosefinSlab-Regular');
+  @include font('Arvo', '../../fonts/Arvo-Regular');
+  @include font('Verdana', '../../fonts/Verdana');
+
+
+
+
+
+/*MEDIA QUERIES*/
+
+@include break(xs){
+  @import '../xs_sc/_xs_screens';
+}
+
+
+ 
+  
